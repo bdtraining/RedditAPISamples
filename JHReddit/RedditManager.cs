@@ -19,8 +19,8 @@ namespace JHReddit
 
         public RedditManager() {
             redditSettings = GetRedditSetting();
-            //timer = new PeriodicTimer(TimeSpan.FromSeconds(redditSettings.TimerRefreshInSeconds));
-            timer = new PeriodicTimer(TimeSpan.FromSeconds(10));
+            timer = new PeriodicTimer(TimeSpan.FromSeconds(redditSettings.TimerRefreshInSeconds));
+            //timer = new PeriodicTimer(TimeSpan.FromSeconds(10));
         }
 
         public async void Start()
