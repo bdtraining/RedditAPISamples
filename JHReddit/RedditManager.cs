@@ -72,8 +72,6 @@ namespace JHReddit
                             {
                                 Console.WriteLine("Maximum error count occured while retriving data, exit.");
                                 cts.Cancel();
-                                cts.Dispose();
-                                timer.Dispose();
                                 return;
                             }
 
@@ -93,8 +91,6 @@ namespace JHReddit
                             {
                                 Console.WriteLine("Maximum error count occured while retriving data, exit.");
                                 cts.Cancel();
-                                cts.Dispose();
-                                timer.Dispose();
                                 return;
                             }
                         }
@@ -104,7 +100,6 @@ namespace JHReddit
             catch (OperationCanceledException)
             {
                 Console.WriteLine("Operation intruptible while process RedditVoteWatch.");
-                cts.Cancel();
             }
         }
 
